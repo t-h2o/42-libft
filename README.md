@@ -4,5 +4,6 @@ Ce projet a pour objectif de vous faire coder en C une librairie de fonctions us
 ## Fonctions
 ```man isalpha```
 ```man isdigit```
+```man atoi```
 
 
