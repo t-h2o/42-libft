@@ -1,4 +1,4 @@
-SRCS	= isalpha.c isdigit.c
+SRCS	= isalpha.c isdigit.c atoi.c
 # source files
 
 OBJS	= ${SRCS:.c=.o}

@@ -1,5 +1,15 @@
 #include	"libft.h"
+#include	<stdlib.h>
 #include	<stdio.h>
+
+void	ft_test_atoi(char* str)
+{
+	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, ft_atoi(str), atoi(str));
+	return ;	
+}
+/*		int max	:	2147483647
+ *		int min	:  -2147483648
+ */
 
 void	ft_test_isalpha(void)
 {
@@ -18,7 +28,17 @@ void	ft_test_isdigit(void)
 }
 int	main(void)
 {
-	ft_test_isalpha();
-	ft_test_isdigit();
+	printf("\nfunction atoi\n");
+
+	ft_test_atoi("123");
+	ft_test_atoi("0");
+	ft_test_atoi("-2147483648");
+	ft_test_atoi("2147483647");
+	ft_test_atoi("+49");
+	ft_test_atoi("+ 49");
+	ft_test_atoi("+4 5 9");
+	ft_test_atoi("-4 5 9");
+	ft_test_atoi("-0045 9");
+	ft_test_atoi("-0045 9");
 	return (0);
 }
