@@ -21,8 +21,8 @@ RM		= rm -f
 .c.o:
 			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	${OBJS}
-			${CC} -o ${NAME} ${OBJS}
+${NAME}:	lib
+			${CC} -o ${NAME} main.c -L. -lft
 
 all:		${NAME}
 			
@@ -31,6 +31,7 @@ clean:
 			${RM} ${OBJS}
 
 fclean:		clean
+			${RM} libft.a
 			${RM} ${NAME}
 
 re :		fclean	all

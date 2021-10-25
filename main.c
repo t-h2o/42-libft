@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include <./libft.a>
+#include	"libft.h"
+#include	<stdio.h>
 
-int	ft_isalpha(char* str);
+//int	ft_isalpha(char* str);
 
 void	ft_test_isalpha(void)
 {
