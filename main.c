@@ -1,6 +1,7 @@
 #include	"libft.h"
 #include	<stdlib.h>
 #include	<stdio.h>
+#include	<ctype.h>
 
 void	ft_color_prompt(int col)
 {
@@ -17,51 +18,50 @@ void	ft_color_prompt(int col)
 	}	
 }
 
-void	ft_int_int(int c)
+void	ft_int_int(int c, int (*ft_ptr)(int), int (*ptr)(int))
 {
-	if (atoi(str) == ft_atoi(str))
+	if (isalnum(c) == ft_isalnum(c))
 		ft_color_prompt(1);
-	else 
+	else
+	{	
 		ft_color_prompt(0);
+		printf("IN : %d,\tOUT : %d\tEXPECTED %d\n", c, (ft_ptr)(c), (ptr)(c));
+	}
 
-	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, ft_atoi(str), atoi(str));
 	return ;	
 }
 
-void	ft_str_int(char* str)
+void	ft_str_int(char* str, int (*ft_ptr)(const char*), int (*ptr)(const char*))
 {
 	if (atoi(str) == ft_atoi(str))
 		ft_color_prompt(1);
 	else 
 		ft_color_prompt(0);
 
-	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, ft_atoi(str), atoi(str));
+	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, (ft_ptr)(str), (ptr)(str));
 	return ;	
+}
+
+void	ft_test_isalnum(void)
+{
+	int	i;
+
+	i = -1;
+	while (++i < 255)
+		ft_int_int(i, ft_isalnum, isalnum);
+	return ;
 }
 
 void ft_test_atoi(void)
 {
 	printf("\nfunction atoi\n");
 
-	ft_test_atoi("+-123");
-	ft_test_atoi("-+123");
-	ft_test_atoi("-123");
-	ft_test_atoi("   123");
-	ft_test_atoi("0");
-	ft_test_atoi("-2147483648");
-	ft_test_atoi("2147483647");
-	ft_test_atoi("++49");
-	ft_test_atoi("+ 49");
-	ft_test_atoi("+4 5 9");
-	ft_test_atoi("-4 5 9");
-	ft_test_atoi("\n\t+--4 5 9");
-	ft_test_atoi("-0045 9");
-	ft_test_atoi("   -0045 9");
-	ft_test_atoi("  -  0045 9");
-	ft_test_atoi("\t\t  -  0045 9");
+	ft_str_int("+-123", ft_atoi, atoi);
 }
 
 int	main(void)
-{
+{	
+	ft_test_atoi();
+	ft_test_isalnum();
 	return (0);
 }
