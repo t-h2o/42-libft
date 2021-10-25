@@ -31,6 +31,11 @@ void	ft_int_int(int c, int (*ft_ptr)(int), int (*ptr)(int))
 	return ;	
 }
 
+void	ft_str_sizet(char* str, size_t (*ft_ptr)(const char*), size_t (*ptr)(const char*))
+{
+
+}
+
 void	ft_str_int(char* str, int (*ft_ptr)(const char*), int (*ptr)(const char*))
 {
 	if (atoi(str) == ft_atoi(str))
@@ -52,6 +57,7 @@ void	ft_test_isalnum(void)
 	return ;
 }
 
+
 void ft_test_atoi(void)
 {
 	printf("\nfunction atoi\n");
@@ -59,9 +65,17 @@ void ft_test_atoi(void)
 	ft_str_int("+-123", ft_atoi, atoi);
 }
 
+void ft_test_strlen(void)
+{
+	printf("\nfunction strlen\n");
+
+	ft_str_sizet("8 char", ft_strlen, strlen);	
+}
+
 int	main(void)
 {	
 	ft_test_atoi();
+	ft_test_strlen();
 	ft_test_isalnum();
 	return (0);
 }

@@ -1,6 +1,7 @@
 SRCS	= 	isalpha.c \
 			isdigit.c \
 			isalnum.c \
+			strlen.c \
 			atoi.c
 # source files
 
