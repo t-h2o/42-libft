@@ -17,7 +17,7 @@ void	ft_color_prompt(int col)
 	}	
 }
 
-void	ft_test_atoi(char* str)
+void	ft_int_int(int c)
 {
 	if (atoi(str) == ft_atoi(str))
 		ft_color_prompt(1);
@@ -27,26 +27,19 @@ void	ft_test_atoi(char* str)
 	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, ft_atoi(str), atoi(str));
 	return ;	
 }
-/*		int max	:	2147483647
- *		int min	:  -2147483648
- */
 
-void	ft_test_isalpha(void)
+void	ft_str_int(char* str)
 {
-	printf("\nis alpha\n%c\t: %d expected : 1\n", 'a', ft_isalpha('a'));	
-	printf("%c\t: %d expected : 0\n\n", '1', ft_isalpha('1'));	
+	if (atoi(str) == ft_atoi(str))
+		ft_color_prompt(1);
+	else 
+		ft_color_prompt(0);
 
+	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, ft_atoi(str), atoi(str));
 	return ;	
 }
 
-void	ft_test_isdigit(void)
-{
-	printf("\nis digit\n%c\t: %d expected : 0\n", 'a', ft_isdigit('a'));	
-	printf("%c\t: %d expected : 1\n", '1', ft_isdigit('1'));	
-
-	return ;	
-}
-int	main(void)
+void ft_test_atoi(void)
 {
 	printf("\nfunction atoi\n");
 
@@ -66,5 +59,9 @@ int	main(void)
 	ft_test_atoi("   -0045 9");
 	ft_test_atoi("  -  0045 9");
 	ft_test_atoi("\t\t  -  0045 9");
+}
+
+int	main(void)
+{
 	return (0);
 }
