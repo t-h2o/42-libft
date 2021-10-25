@@ -1,3 +1,4 @@
 *.o
 program
-
+libft.a
+.DS_Store
