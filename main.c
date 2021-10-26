@@ -75,14 +75,14 @@ void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const 
 
 int	main(void)
 {	
-	const char *strings[] = {"one","-8954","**as  +32"};
+	const char *strings[] = {"o1ne","-8954","**as  +32"};
 
 	printf("\nmemset\n");	
 	void	*ptrVoid = malloc(sizeof(char) * 6);
 	ptrVoid = "AbCd5\0";
-	printf("string\n-->%s\n\n", (char*)ptrVoid);
-	void	*pol = memset(ptrVoid, 48, 2);
-	printf("string\n-->%s\n\n", (char*)pol);
+	printf("string\n--> %s\n\n", (char *)ptrVoid);
+//	void	*pol = memset(ptrVoid, 48, 2);
+//	printf("string\n--> %s\n\n", (char *)ptrVoid);
 	
 
 	printf("\nisalnum\n");	

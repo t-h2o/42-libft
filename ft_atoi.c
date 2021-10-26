@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:24:41 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 13:15:29 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/10/26 15:09:33 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int	ft_atoi(const char *str)
 	aera = 0;
 	while (str[++i])
 	{
+		if (!ft_isdigit(str[i]) && !ft_isblank(str[i]) && !ft_issign(str[i]))
+			break ;
 		if (!ft_isdigit(str[i]) && aera == 1)
 			break ;
 		if (ft_isblank(str[i]) || ft_issign(str[i]))
