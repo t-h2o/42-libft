@@ -24,7 +24,7 @@ void	ft_int_int(int (*ft_ptr)(int), int (*ptr)(int))
 	while (++c < 600)
 	{
 
-		if (isalnum(c) == ft_isalnum(c))
+		if ((ft_ptr)(c) == (ptr)(c))
 			ft_color_prompt(1);
 		else
 		{	
@@ -87,6 +87,9 @@ int	main(void)
 
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
+
+	printf("\ntoupper\n");	
+	ft_int_int(ft_toupper, toupper);
 
 	printf("\nisalpha\n");	
 	ft_int_int(ft_isalpha, isalpha);
