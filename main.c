@@ -1,7 +1,4 @@
 #include	"libft.h"
-#include	<stdlib.h>
-#include	<stdio.h>
-#include	<ctype.h>
 
 void	ft_color_prompt(int col)
 {
@@ -88,6 +85,12 @@ int	main(void)
 
 	printf("\nisdigit\n");	
 	ft_int_int(ft_isdigit, isdigit);
+	
+	printf("\nisascii\n");	
+	ft_int_int(ft_isascii, isascii);
+	
+	printf("\nisprint\n");	
+	ft_int_int(ft_isprint, isprint);
 	
 	printf("\natoi\n");	
 	ft_str_int(strings, ft_atoi, atoi);

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:14:10 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 13:59:30 by tgrivel          ###   ########.fr       */
+/*   Created: 2021/10/26 13:51:51 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/10/26 14:09:58 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 typedef unsigned int size_t;
-size_t	ft_strlen(const char *s)
-{
-	int	i;
 
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned int	i;
+	unsigned char	fill;
+
+	fill = c;
 	i = 0;
-	while (s[i])
-		++i;
-	return (i);
+	while (i < len)
+	{
+		//b[i] = fill;
+		i++;
+	}
+	return (b);
 }

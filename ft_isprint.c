@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:14:10 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 13:59:30 by tgrivel          ###   ########.fr       */
+/*   Created: 2021/10/26 13:44:30 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/10/26 13:45:41 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int size_t;
-size_t	ft_strlen(const char *s)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		++i;
-	return (i);
+	if (c >= 40 && c <= 126)
+		return (1);
+	return (0);
 }
