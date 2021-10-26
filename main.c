@@ -77,6 +77,14 @@ int	main(void)
 {	
 	const char *strings[] = {"one","-8954","**as  +32"};
 
+	printf("\nmemset\n");	
+	void	*ptrVoid = malloc(sizeof(char) * 6);
+	ptrVoid = "AbCd5\0";
+	printf("string\n-->%s\n\n", (char*)ptrVoid);
+	void	*pol = memset(ptrVoid, 48, 2);
+	printf("string\n-->%s\n\n", (char*)pol);
+	
+
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
 
@@ -92,6 +100,8 @@ int	main(void)
 	printf("\nisprint\n");	
 	ft_int_int(ft_isprint, isprint);
 	
+
+
 	printf("\natoi\n");	
 	ft_str_int(strings, ft_atoi, atoi);
 	
