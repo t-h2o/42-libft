@@ -1,8 +1,8 @@
-SRCS	= 	isalpha.c \
-			isdigit.c \
-			isalnum.c \
-			strlen.c \
-			atoi.c
+SRCS	= 	ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c \
+			ft_strlen.c \
+			ft_atoi.c
 # source files
 
 OBJS	= ${SRCS:.c=.o}

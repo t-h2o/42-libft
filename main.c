@@ -13,6 +13,9 @@ void	ft_color_prompt(int col)
 		case 1:
 			printf("\033[0;32m");	// green
 			break;
+		case 2:
+			printf("\033[0;37m");	// white 
+			break;
 	}	
 }
 
@@ -32,6 +35,7 @@ void	ft_int_int(int (*ft_ptr)(int), int (*ptr)(int))
 			printf("IN : %d,\tOUT : %d\tEXPECTED %d\n", c, (ft_ptr)(c), (ptr)(c));
 		}
 	}
+	ft_color_prompt(2);
 	return ;	
 }
 
@@ -48,6 +52,7 @@ void	ft_str_sizet(const char** list, size_t (*ft_ptr)(const char*), size_t (*ptr
 			ft_color_prompt(0);
 		printf("IN : %s,\tOUT : %zu\tEXPECTED %zu\n", list[i], (ft_ptr)(list[i]), (ptr)(list[i]));
 	}
+	ft_color_prompt(2);
 	return ;	
 
 }
@@ -66,16 +71,23 @@ void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const 
 
 		printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", list[i], (ft_ptr)(list[i]), (ptr)(list[i]));
 	}
+	ft_color_prompt(2);
 	return ;	
 }
 
 
 int	main(void)
 {	
-	const char *strings[] = {"one","two","three"};
+	const char *strings[] = {"one","-8954","**as  +32"};
 
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
+
+	printf("\nisalpha\n");	
+	ft_int_int(ft_isalpha, isalpha);
+
+	printf("\nisdigit\n");	
+	ft_int_int(ft_isdigit, isdigit);
 	
 	printf("\natoi\n");	
 	ft_str_int(strings, ft_atoi, atoi);
