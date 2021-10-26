@@ -1,12 +1,6 @@
 # 42-Libft
 Ce projet a pour objectif de vous faire coder en C une librairie de fonctions usuelles que vous pourrez utiliser dans tous vos prochains projets.
 
-## Fonctions
-```man isalpha```
-```man isdigit```
-```man atoi```
-
-
 ## Video
 * [C0](https://www.youtube.com/playlist?list=PLVQYiy6xNUxz5wbzZn4tfUhF4djgzscB-) introduction
 * [C1](https://www.youtube.com/playlist?list=PLVQYiy6xNUxytsXWxZx6odBJMbRktIHTs) variable
