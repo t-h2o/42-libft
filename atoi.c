@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:24:41 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/25 18:07:35 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/10/26 13:15:29 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_isdigit(char c)
 	return (0);
 }
 
-int	ft_return(const char* str, int i, int lim)
+int	ft_return(const char *str, int i, int lim)
 {
 	int	nbr;
 	int	ten;
@@ -71,6 +71,8 @@ int	ft_atoi(const char *str)
 		if (ft_isdigit(str[i]))
 			aera = 1;
 	}
+	if (!aera)
+		return (0);
 	return (ft_return(str, i, lim));
 }
 

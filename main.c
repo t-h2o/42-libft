@@ -8,74 +8,80 @@ void	ft_color_prompt(int col)
 	switch (col)
 	{
 		case 0:
-			// red
-			printf("\033[1;31m");
+			printf("\033[1;31m");	// red
 			break;
 		case 1:
-			// green 
-			printf("\033[0;32m");
+			printf("\033[0;32m");	// green
 			break;
 	}	
 }
 
-void	ft_int_int(int c, int (*ft_ptr)(int), int (*ptr)(int))
+void	ft_int_int(int (*ft_ptr)(int), int (*ptr)(int))
 {
-	if (isalnum(c) == ft_isalnum(c))
-		ft_color_prompt(1);
-	else
-	{	
-		ft_color_prompt(0);
-		printf("IN : %d,\tOUT : %d\tEXPECTED %d\n", c, (ft_ptr)(c), (ptr)(c));
+	int	c;
+
+	c = -100;
+	while (++c < 600)
+	{
+
+		if (isalnum(c) == ft_isalnum(c))
+			ft_color_prompt(1);
+		else
+		{	
+			ft_color_prompt(0);
+			printf("IN : %d,\tOUT : %d\tEXPECTED %d\n", c, (ft_ptr)(c), (ptr)(c));
+		}
 	}
-
 	return ;	
 }
 
-void	ft_str_sizet(char* str, size_t (*ft_ptr)(const char*), size_t (*ptr)(const char*))
-{
-
-}
-
-void	ft_str_int(char* str, int (*ft_ptr)(const char*), int (*ptr)(const char*))
-{
-	if (atoi(str) == ft_atoi(str))
-		ft_color_prompt(1);
-	else 
-		ft_color_prompt(0);
-
-	printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", str, (ft_ptr)(str), (ptr)(str));
-	return ;	
-}
-
-void	ft_test_isalnum(void)
+void	ft_str_sizet(const char** list, size_t (*ft_ptr)(const char*), size_t (*ptr)(const char*))
 {
 	int	i;
 
 	i = -1;
-	while (++i < 255)
-		ft_int_int(i, ft_isalnum, isalnum);
-	return ;
+	while (i++ < 2)
+	{
+		if ((ft_ptr)(list[i]) == (ptr)(list[i]))
+			ft_color_prompt(1);
+		else
+			ft_color_prompt(0);
+		printf("IN : %s,\tOUT : %zu\tEXPECTED %zu\n", list[i], (ft_ptr)(list[i]), (ptr)(list[i]));
+	}
+	return ;	
+
 }
 
-
-void ft_test_atoi(void)
+void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const char*))
 {
-	printf("\nfunction atoi\n");
+	int	i;
 
-	ft_str_int("+-123", ft_atoi, atoi);
+	i = -1;
+	while (i++ < 2)
+	{
+		if (atoi(list[i]) == ft_atoi(list[i]))
+			ft_color_prompt(1);
+		else 
+			ft_color_prompt(0);
+
+		printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", list[i], (ft_ptr)(list[i]), (ptr)(list[i]));
+	}
+	return ;	
 }
 
-void ft_test_strlen(void)
-{
-	printf("\nfunction strlen\n");
-
-	ft_str_sizet("8 char", ft_strlen, strlen);	
-}
 
 int	main(void)
 {	
-	ft_test_atoi();
-	ft_test_strlen();
-	ft_test_isalnum();
+	const char *strings[] = {"one","two","three"};
+
+	printf("\nisalnum\n");	
+	ft_int_int(ft_isalnum, isalnum);
+	
+	printf("\natoi\n");	
+	ft_str_int(strings, ft_atoi, atoi);
+	
+	printf("\nstrlen\n");	
+	ft_str_sizet(strings, ft_strlen, strlen);
+	
 	return (0);
 }

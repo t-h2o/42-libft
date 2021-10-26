@@ -6,14 +6,14 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:57:02 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/25 14:14:16 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/10/26 13:13:27 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
 	if (c < 'A' || (c > 'Z' && c < 'a') || c > 'z')
-			return (0);
+		return (0);
 	return (1);
 }
 
