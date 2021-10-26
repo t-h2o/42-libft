@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:51:51 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 16:44:57 by tgrivel          ###   ########.fr       */
+/*   Created: 2021/10/26 17:13:56 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/10/26 17:29:25 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int size_t;
-
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*str = (unsigned char*)b;
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (i < len)
-	{
-		str[i] = (unsigned char)c;
-		i++;
-	}
-	return (str);
+	i = -1;
+	while (s[++i])
+		if (s[i] == c)
+			return ((char*)&s[i]);
+	return (0);	
 }

@@ -6,13 +6,15 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 13:58:54 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 13:13:57 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/10/26 16:51:30 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c < '0' || c > '9')
+	if (c == 304)
 		return (0);
-	return (1);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

@@ -84,6 +84,12 @@ int	main(void)
 //	void	*pol = memset(ptrVoid, 48, 2);
 //	printf("string\n--> %s\n\n", (char *)ptrVoid);
 	
+	
+	printf("\nstrchr\n");	
+	char arr[] = "Arnolde leopode";
+	printf("\nIN\n-->%s\nOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\n",arr, strchr(arr, 'e'), ft_strchr(arr, 'e'));
+
+	printf("\nIN\n-->%s\nOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\n",arr, strchr(arr, 'z'), ft_strchr(arr, 'z'));
 
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
