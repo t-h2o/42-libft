@@ -6,14 +6,15 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 13:14:10 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 13:59:30 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/10/27 12:48:17 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef unsigned int size_t;
+#include	<stddef.h>
+
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

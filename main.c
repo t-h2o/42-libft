@@ -86,10 +86,15 @@ int	main(void)
 	
 	
 	printf("\nstrchr\n");	
-	char arr[] = "Arnolde leopode";
-	printf("\nIN\n-->%s\nOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\n",arr, strchr(arr, 'e'), ft_strchr(arr, 'e'));
+	char	arr[] = "Arnolde leopode end ?";
+	char	let = 'e';
 
-	printf("\nIN\n-->%s\nOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\n",arr, strchr(arr, 'z'), ft_strchr(arr, 'z'));
+	printf("\n\n\tIN\n--> %s\n--> letter :%c\n\n\tOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\nstrrchr\t\t-->%s\nft_strrchr\t-->%s\n", arr, let, strchr(arr, let), ft_strchr(arr, let), strrchr(arr, let), ft_strrchr(arr, let));
+	
+	let = 'z';
+	
+	printf("\n\n\tIN\n--> %s\n--> letter :%c\n\n\tOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\nstrrchr\t\t-->%s\nft_strrchr\t-->%s\n", arr, let, strchr(arr, let), ft_strchr(arr, let), strrchr(arr, let), ft_strrchr(arr, let));
+
 
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);

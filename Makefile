@@ -7,6 +7,7 @@ SRCS	= 	ft_isalpha.c \
 			ft_strlen.c \
 			ft_memset.c \
 			ft_strchr.c \
+			ft_strrchr.c \
 			ft_atoi.c
 # source files
 
