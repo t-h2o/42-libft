@@ -1,8 +1,7 @@
-#include	<stdlib.h>
-#include	<stdio.h>
-#include	<ctype.h>
-#include	<string.h>
-
+#ifndef LIBFT_H
+ #include	<stddef.h>
+#define LIBFT_H
+#endif
 
 	// string to int
 

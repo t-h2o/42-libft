@@ -1,5 +1,8 @@
 #include	"libft.h"
-
+#include	<stdlib.h>
+#include	<stdio.h>
+#include	<ctype.h>
+#include	<string.h>
 void	ft_color_prompt(int col)
 {
 	switch (col)
@@ -104,7 +107,13 @@ int	main(void)
 	
 	printf("\n\n\tIN\n--> %s\n--> letter :%c\n\n\tOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\nstrrchr\t\t-->%s\nft_strrchr\t-->%s\n", arr, let, strchr(arr, let), ft_strchr(arr, let), strrchr(arr, let), ft_strrchr(arr, let));
 
+	
+	char s1[] = "Salurations";
+	char s2[] = "Salutations";
+	
+	printf("s1 : %s\ns2 : %s\nstrncmp : %d\nft_strncmp : %d", s1, s2, strncmp(s1, s2, 9), ft_strncmp(s1, s2, 9));
 
+	
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
 
@@ -126,10 +135,6 @@ int	main(void)
 	printf("\nisprint\n");	
 	ft_int_int(ft_isprint, isprint);
 	
-	char s1[] = "Salurations";
-	char s2[] = "Salutations";
-	
-	printf("s1 : %s\ns2 : %s\nstrncmp : %d\nft_strncmp : %d", s1, s2, strncmp(s1, s2, 9), ft_strncmp(s1, s2, 9));
 
 	printf("\natoi\n");	
 	ft_str_int(strings, ft_atoi, atoi);
