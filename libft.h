@@ -30,6 +30,10 @@ void	*ft_memset(void *b, int c, size_t len);
 void	*ft_bzero(void *b, size_t len);
 
 
+	// int n, int fd --> void
+
+void	ft_putnbr_fd(int n, int fd);
+
 	// char, int --> pointer on char
 
 char	*ft_strchr(const char *s, int c);

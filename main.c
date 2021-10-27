@@ -95,6 +95,7 @@ int	main(void)
 	add = ft_bzero(ptrVoid, 2);
 	printf("ft_bzero\n--> %s\t%p\n\n", ptrVoid, add);
 	
+	ft_putnbr_fd(-123456, 1);
 	
 	printf("\nstrchr\n");	
 	
@@ -113,7 +114,18 @@ int	main(void)
 	
 	printf("s1 : %s\ns2 : %s\nstrncmp : %d\nft_strncmp : %d", s1, s2, strncmp(s1, s2, 9), ft_strncmp(s1, s2, 9));
 
+
+	printf("\natoi\n");	
+	ft_str_int(strings, ft_atoi, atoi);
 	
+	printf("\nstrlen\n");	
+	ft_str_sizet(strings, ft_strlen, strlen);
+	
+	return (0);
+}
+
+
+/*	
 	printf("\nisalnum\n");	
 	ft_int_int(ft_isalnum, isalnum);
 
@@ -134,13 +146,4 @@ int	main(void)
 	
 	printf("\nisprint\n");	
 	ft_int_int(ft_isprint, isprint);
-	
-
-	printf("\natoi\n");	
-	ft_str_int(strings, ft_atoi, atoi);
-	
-	printf("\nstrlen\n");	
-	ft_str_sizet(strings, ft_strlen, strlen);
-	
-	return (0);
-}
+*/	
