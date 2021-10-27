@@ -123,7 +123,10 @@ int	main(void)
 	printf("\nisprint\n");	
 	ft_int_int(ft_isprint, isprint);
 	
-
+	char s1[] = "Salurations";
+	char s2[] = "Salutations";
+	
+	printf("s1 : %s\ns2 : %s\nstrncmp : %d\nft_strncmp : %d", s1, s2, strncmp(s1, s2, 9), ft_strncmp(s1, s2, 9));
 
 	printf("\natoi\n");	
 	ft_str_int(strings, ft_atoi, atoi);
