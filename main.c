@@ -111,6 +111,9 @@ int	main(void)
 	printf("\ntoupper\n");	
 	ft_int_int(ft_toupper, toupper);
 
+	printf("\ntolower\n");	
+	ft_int_int(ft_tolower, tolower);
+
 	printf("\nisalpha\n");	
 	ft_int_int(ft_isalpha, isalpha);
 
