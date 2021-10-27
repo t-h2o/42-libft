@@ -1,6 +1,23 @@
 # 42-Libft
 Ce projet a pour objectif de vous faire coder en C une librairie de fonctions usuelles que vous pourrez utiliser dans tous vos prochains projets.
 
+## Functions
+
+### Diff between strchr and strrchr
+
+strchr search on the top of the string instead, strrchr search on the bottom of the string
+
+* example
+	
+	IN
+--> Arnolde leopode end ?
+--> letter :e
+
+	OUT
+strchr		-->e leopode end ?
+strrchr		-->end ?
+
+
 ## Video
 * [C0](https://www.youtube.com/playlist?list=PLVQYiy6xNUxz5wbzZn4tfUhF4djgzscB-) introduction
 * [C1](https://www.youtube.com/playlist?list=PLVQYiy6xNUxytsXWxZx6odBJMbRktIHTs) variable
