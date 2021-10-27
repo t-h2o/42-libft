@@ -7,23 +7,28 @@ Ce projet a pour objectif de vous faire coder en C une librairie de fonctions us
 
 strchr search on the top of the string instead, strrchr search on the bottom of the string
 
-* example
+#### Example
 	
-*x	IN
+#### IN
+
 - --> Arnolde leopode end ?
 - --> letter :e
 
-*	OUT
+#### OUT
+
 - strchr --> e leopode end ?
 - strrchr --> end ?
+
 
 ## Lib
 
 * [strings.h](https://fr.wikipedia.org/wiki/String.h)
+* [string.h - apple](https://opensource.apple.com/source/Libc/Libc-1439.40.11/string/)
 * [stdio.h](https://fr.wikipedia.org/wiki/Stdio.h)
 
 
 ## Video
+
 * [C0](https://www.youtube.com/playlist?list=PLVQYiy6xNUxz5wbzZn4tfUhF4djgzscB-) introduction
 * [C1](https://www.youtube.com/playlist?list=PLVQYiy6xNUxytsXWxZx6odBJMbRktIHTs) variable
 * [C2](https://www.youtube.com/playlist?list=PLVQYiy6xNUxzpalWNSNJc4wEDmfs2Mj5t) -
