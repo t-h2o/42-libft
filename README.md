@@ -9,13 +9,18 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 
 * example
 	
-*	IN
+*x	IN
 - --> Arnolde leopode end ?
 - --> letter :e
 
 *	OUT
 - strchr --> e leopode end ?
 - strrchr --> end ?
+
+## Lib
+
+* [strings.h](https://fr.wikipedia.org/wiki/String.h)
+* [stdio.h](https://fr.wikipedia.org/wiki/Stdio.h)
 
 
 ## Video
