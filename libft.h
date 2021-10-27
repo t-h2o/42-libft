@@ -27,6 +27,7 @@ int	ft_toupper(int c);
 	// pointer to pointer
 
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_bzero(void *b, size_t len);
 
 
 	// char, int --> pointer on char

@@ -78,14 +78,23 @@ int	main(void)
 	const char *strings[] = {"o1ne","-8954","**as  +32"};
 
 	printf("\nmemset\n");	
-	void	*ptrVoid = malloc(sizeof(char) * 6);
-	ptrVoid = "AbCd5\0";
-	printf("string\n--> %s\n\n", (char *)ptrVoid);
-//	void	*pol = memset(ptrVoid, 48, 2);
-//	printf("string\n--> %s\n\n", (char *)ptrVoid);
+	char	ptrVoid[] = "AbCd5";
+	void	*add;
+	printf("string\n--> %s\t%p \n\n", ptrVoid, ptrVoid);
+	add = memset(ptrVoid, '1', 2);
+	printf("memset\n--> %s\t%p\n\n", ptrVoid, add);
+	
+	printf("string\n--> %s\t%p\n\n", ptrVoid, add);
+	add = ft_memset(ptrVoid, '@', 2);
+	printf("ft_memset\n--> %s\t%p\n\n", ptrVoid, add);
+	
+	printf("string\n--> %s\t%p\n\n", ptrVoid, add);
+	add = ft_bzero(ptrVoid, 2);
+	printf("ft_bzero\n--> %s\t%p\n\n", ptrVoid, add);
 	
 	
 	printf("\nstrchr\n");	
+	
 	char	arr[] = "Arnolde leopode end ?";
 	char	let = 'e';
 

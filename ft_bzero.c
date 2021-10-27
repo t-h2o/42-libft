@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 13:51:51 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/27 16:05:43 by tgrivel          ###   ########.fr       */
+/*   Created: 2021/10/27 16:22:25 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/10/27 16:23:15 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<stddef.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < len)
-	{
-		((char *)b)[i] = (char)c;
-		i++;
-	}
-	return (b);
+	while (n--)
+		((char *)s)[n] = 0;
+	return (s);
 }
