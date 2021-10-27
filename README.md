@@ -9,13 +9,13 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 
 * example
 	
-	IN
---> Arnolde leopode end ?
---> letter :e
+*	IN
+- --> Arnolde leopode end ?
+- --> letter :e
 
-	OUT
-strchr		-->e leopode end ?
-strrchr		-->end ?
+*	OUT
+- strchr --> e leopode end ?
+- strrchr --> end ?
 
 
 ## Video
