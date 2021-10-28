@@ -11,7 +11,9 @@ SRCS	= 	ft_isalpha.c \
 			ft_strchr.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
+			ft_striteri.c \
 			ft_putnbr_fd.c \
+			ft_putchar_fd.c \
 			ft_atoi.c
 # source files
 

@@ -33,6 +33,15 @@ void	*ft_bzero(void *b, size_t len);
 	// int n, int fd --> void
 
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(int n, int fd);
+void	ft_putendl_fd(int n, int fd);
+void	ft_putchar_fd(int n, int fd);
+
+
+	// pointer on function
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 
 	// char, int --> pointer on char
 
