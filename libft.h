@@ -27,6 +27,7 @@ int	ft_tolower(int c);
 	// pointer to pointer
 
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_bzero(void *b, size_t len);
 
 
