@@ -19,6 +19,7 @@ SRCS	= 	ft_isalpha.c \
 			ft_putnbr_fd.c \
 			ft_putchar_fd.c \
 			ft_strjoin.c \
+			ft_memmove.c \
 			ft_atoi.c
 # source files
 

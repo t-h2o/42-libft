@@ -35,4 +35,5 @@ char
 	i = 0;
 	while (s2[i])
 		str[j++] = s1[i++];
+	return (str);
 }
