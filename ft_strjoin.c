@@ -31,10 +31,8 @@ char
 	i = 0;
 	j = 0;
 	while (s1[i])
-		str[j++] == s1[i++];
+		str[j++] = s1[i++];
 	i = 0;
 	while (s2[i])
-		str[j++] == s1[i++]	
-
-
+		str[j++] = s1[i++];
 }
