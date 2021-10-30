@@ -101,8 +101,9 @@ int	main(void)
 	
 	char	arr[] = "Arnolde leopode end ?";
 	char	let = 'e';
-
-	printf("\n\n\tIN\n--> %s\n--> letter :%c\n\n\tOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\nstrrchr\t\t-->%s\nft_strrchr\t-->%s\n", arr, let, strchr(arr, let), ft_strchr(arr, let), strrchr(arr, let), ft_strrchr(arr, let));
+	printf("\n\n\tIN\n--> %s\n--> letter :%c\n\n", arr, let);
+	
+	printf("\tOUT\nstrchr\t\t-->%s\nft_strchr\t-->%s\nstrrchr\t\t-->%s\nft_strrchr\t-->%s\n", strchr(arr, let), ft_strchr(arr, let), strrchr(arr, let), ft_strrchr(arr, let));
 	
 	let = 'z';
 	

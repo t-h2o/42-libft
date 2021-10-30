@@ -27,6 +27,7 @@ int	ft_tolower(int c);
 	// pointer to pointer
 
 void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_bzero(void *b, size_t len);
 
 
@@ -35,6 +36,15 @@ void	*ft_bzero(void *b, size_t len);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(int n, int fd);
+void	ft_putendl_fd(int n, int fd);
+void	ft_putchar_fd(int n, int fd);
+
+
+	// pointer on function
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
 
 	// char, int --> pointer on char
 
