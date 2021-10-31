@@ -1,0 +1,1 @@
+clear && gcc -Wall -Wextra -Werror ft_split.c && ./a.out qwertz . 1234567890.lol.pol . 
