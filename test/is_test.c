@@ -1,4 +1,5 @@
-#include	"libtest.h"
+#include	"./libtest.h"
+#include	"../libft.h"
 
 void	is_test(void)
 {

@@ -1,4 +1,4 @@
-#include	"libtest.h"
+#include	"./libtest.h"
 
 void
 	strlen_test(void)
