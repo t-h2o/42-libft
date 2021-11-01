@@ -1,7 +1,6 @@
 #ifndef LIBFT_H
  #include	<stddef.h>
-#define LIBFT_H
-#endif
+ #define LIBFT_H
 
 	// whithout extern functions
 
@@ -47,3 +46,4 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putchar_fd(int n, int fd);
 
 
+#endif
