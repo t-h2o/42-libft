@@ -22,7 +22,7 @@ int	main(void)
 {	
 	const char *strings[] = {"o1ne","-8954","**as  +32"};
 
-//	is_test();
+	is_test();
 
 	strlen_test();
 

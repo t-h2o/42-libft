@@ -57,7 +57,6 @@ RM		= rm -f
 			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	lib
-			${CC} -o ${NAME} test/main.c -L. -lft
 
 all:		${NAME}
 			

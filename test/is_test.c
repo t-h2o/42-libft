@@ -1,11 +1,7 @@
 #include	"libtest.h"
 
-
-
-void
-	is_test(void)
+void	is_test(void)
 {
-
 	printf("\n\n\tIS TEST\n\n");
 
 	printf("\nisalnum\n");	
