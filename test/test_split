@@ -1,4 +1,0 @@
-clear
-gcc -Wall -Wextra -Werror ft_split.c ft_split_test.c 
-./a.out "qwertz . 1234567890.lol.pol" . 
-rm a.out 
