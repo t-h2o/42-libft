@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include	"libft.h"
+
 int	ft_issign(char c)
 {
 	if (c == '+' || c == '-')
@@ -20,13 +22,6 @@ int	ft_issign(char c)
 int	ft_isblank(char c)
 {
 	if (c == '\n' || c == '\t' || c == ' ' || c == ' ')
-		return (1);
-	return (0);
-}
-
-int	ft_isdigit(char c)
-{
-	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

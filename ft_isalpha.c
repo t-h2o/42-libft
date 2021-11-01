@@ -18,16 +18,3 @@ int	ft_isalpha(int c)
 		return (0);
 	return (1);
 }
-
-/*	return 0
- *
- *	A 65
- *	Z 90
- *	
- *	return 0
- *
- *	a 97
- *	z 122
- *
- *	return 0
- */
