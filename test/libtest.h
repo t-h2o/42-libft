@@ -21,6 +21,7 @@ void	strlen_test(void);
 void	strchr_test(void);
 void	strncmp_test(void);
 void	atoi_test(void);
+void	itoa_test(void);
 void	split_test(void);
 void	strjoin_test(void);
 #endif

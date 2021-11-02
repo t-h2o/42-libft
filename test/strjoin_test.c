@@ -10,5 +10,5 @@ void	strjoin_test(void)
 
 	str = ft_strjoin(s1, s2);
 	
-	printf("s1 : %s\ns2 : %s\n str : %s\n", s1, s2, str);	
+	printf("s1 : %s\ns2 : %s\nstr : %s\n", s1, s2, str);	
 }

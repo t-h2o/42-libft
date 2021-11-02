@@ -83,7 +83,7 @@ char
 	while (i < nb_wrd)
 	{
 		j = 0;
-		if (s1[k] == c)
+		if (s[k] == c)
 			k++;
 		while (j <= size && s[k] != c && s[k])
 		{

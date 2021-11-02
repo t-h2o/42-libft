@@ -18,8 +18,9 @@ int
 		nb++;
 	}
 	if (n == 0)
-		return (1);
+		nb = 1;
 
+	printf("nb char %d\n", nb);
 	return (nb);
 }
 
@@ -46,21 +47,19 @@ char
 	while (ten / 10 <= n)
 	{
 		s[--i] = n % ten;
+		printf("%d // %d = %d", n, ten, s[i]);
+		printf("\ts[%d] = %d\n", i, s[i]);
+		printf("%d / (%d / 10) + 48", s[i], ten);
 		s[i] = s[i] / (ten / 10) + '0';
+		printf("\ts[%d] = %c\n", i, s[i]);
 		ten *= 10;
-		printf("\ts[%d] --> %c\n", i, s[i]);
 	}
 	
 	return (s);
 }
-/*	201 % 10 = R 1 
- *	1 / 1 = 1
- *	
- *	201 % 100 = 2
- *	1 / 10 = 0
+
+/*	
  *
- *	201 % 1000 = 201
- *	201 / 100 = 2
  */
 /*
  * 	123 % 10 = 3
@@ -72,24 +71,17 @@ char
  *	123 % 100 = 123
  *	123 / 100 = 1
  */
-
-int
-	main(void)
-{
-	int	n = -20103;
-	printf("n : %d\nn char %d\n", n, nb_char(n));
-	printf("--> %s\n", ft_itoa(n));
-	
-	n = -123;
-	printf("\nn : %d\nn char %d\n", n, nb_char(n));
-	printf("--> %s\n", ft_itoa(n));
-	
-	n = 0;
-	printf("\nn : %d\nn char %d\n", n, nb_char(n));
-	printf("--> %s\n", ft_itoa(n));
-	
-	n = 20111;
-	printf("\nn : %d\nn char %d\n", n, nb_char(n));
-	printf("--> %s\n", ft_itoa(n));
-	return (0);
-}
+/*	s[0-3]
+ *	s[3] = '\0'
+ *	201 % 10 = R 1 
+ *	1 / 1 = 1
+ *	s[2] = 1
+ *	
+ *	201 % 100 = 2
+ *	1 / 10 = 0
+ *	s[1] = 0
+ *
+ *	201 % 1000 = 201
+ *	201 / 100 = 2
+ *	s[0] = 2
+ */

@@ -7,6 +7,7 @@ SRCS	= 	main.c \
 		strncmp_test.c \
 		callfunction.c \
 		atoi_test.c \
+		itoa_test.c \
 		split_test.c \
 
 

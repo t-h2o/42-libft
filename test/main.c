@@ -39,6 +39,8 @@ int	main(void)
 
 	atoi_test();
 	
+	itoa_test();
+	
 	split_test();
 	
 	return (0);
