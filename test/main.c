@@ -24,8 +24,6 @@ int	main(void)
 
 	strlen_test();
 
-//	atoi_test();
-
 //	is_test();
 
 	memset_test();
@@ -43,6 +41,8 @@ int	main(void)
 	itoa_test();
 	
 	split_test();
+	
+	atoi_test();
 	
 	return (0);
 }
