@@ -27,7 +27,7 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 * [stdio.h](https://fr.wikipedia.org/wiki/Stdio.h)
 
 
-## Video
+## Video 42
 
 * [C0](https://www.youtube.com/playlist?list=PLVQYiy6xNUxz5wbzZn4tfUhF4djgzscB-) introduction
 * [C1](https://www.youtube.com/playlist?list=PLVQYiy6xNUxytsXWxZx6odBJMbRktIHTs) variable
@@ -41,3 +41,7 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 * [C9](https://www.youtube.com/playlist?list=PLVQYiy6xNUxw6n6q_i8wek6U7t7CeAXhU) makefile
 * [C11](https://www.youtube.com/playlist?list=PLVQYiy6xNUxx8sKygTdqtOPytqN7sb0Vz) pointeur sur fonction
 * [C12](https://www.youtube.com/playlist?list=PLVQYiy6xNUxwmUOmyYSaI6gD1UyfF9MSj) list chaine
+
+## others doc
+
+* [Makefile by GNU](https://www.gnu.org/software/make/manual/make.html#Introduction)
