@@ -1,6 +1,7 @@
 SRCS	= 	main.c \
 		is_test.c \
 		memset_test.c \
+		memcpy_test.c \
 		strlen_test.c \
 		strchr_test.c \
 		strjoin_test.c \

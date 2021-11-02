@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:59:13 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 14:04:32 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/02 17:48:02 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ char
 	size_t	i;
 	
 	i = 0;
-	while (n-- && src[i] != '\0')
+	while (n--)
 	{	
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = 0;
 	return (dest);
 }

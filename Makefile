@@ -73,6 +73,7 @@ re :		fclean	all
 lib:		${OBJS}
 			ar rc libft.a *.o
 			ranlib libft.a
+			cp *a test/
 
 log:
 		git log --graph --oneline

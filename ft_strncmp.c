@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:33:29 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/27 16:53:20 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/02 17:44:33 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int
 	size_t	i;
 
 	i = 0;
-	while (i <= n)
+	while (n--)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return (s2[i] - s1[i]);
 		i++;
 	}
 	return (0);

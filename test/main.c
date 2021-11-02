@@ -20,9 +20,11 @@ void	ft_color_prompt(int col)
 
 int	main(void)
 {	
+	memcpy_test();
+
 	strlen_test();
 
-	atoi_test();
+//	atoi_test();
 
 //	is_test();
 

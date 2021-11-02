@@ -17,6 +17,7 @@ void	ft_color_prompt(int col);
 
 void	is_test(void);
 void	memset_test(void);
+void	memcpy_test(void);
 void	strlen_test(void);
 void	strchr_test(void);
 void	strncmp_test(void);
