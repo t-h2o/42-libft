@@ -23,7 +23,7 @@ void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const 
 	int	i;
 
 	i = -1;
-	while (i++ < 2)
+	while (list[++i])
 	{
 		if (atoi(list[i]) == ft_atoi(list[i]))
 			ft_color_prompt(1);

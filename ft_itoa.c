@@ -6,13 +6,13 @@ int
 	nb_char(int n)
 {
 	int	nb;
-	int	ten;
+	long int	ten;
 
 	ten = 1;
 	nb = 0;
 	if (n < 0)
 		nb++;
-	while (n >= ten || -n >= ten)
+	while ((long int)n >= ten || -(long int)n >= ten)
 	{
 		ten *= 10;
 		nb++;
@@ -30,7 +30,7 @@ char
 	char	*s;	
 	int	i;
 	int	c;
-	int	ten;
+	long int	ten;
 
 	c = nb_char(n);
 	s = (char *)malloc(sizeof(char) * (c + 1));	
@@ -38,27 +38,40 @@ char
 		return (0);
 	s[c] = '\0';
 	
+	i = 0;	
+	if (n == -2147483648)
+		s = "-2147483648";
+	if (n == -2147483648)
+		return (s);
 	if (n < 0)
-		s[0] = '-';
+		s[i++] = '-';
 	if (n < 0)
 		n = -n;
-	i = c;
-	ten = 10;
-	while (ten / 10 <= n)
-	{
-		s[--i] = n % ten;
-		printf("%d // %d = %d", n, ten, s[i]);
-		printf("\ts[%d] = %d\n", i, s[i]);
-		printf("%d / (%d / 10) + 48", s[i], ten);
-		s[i] = s[i] / (ten / 10) + '0';
-		printf("\ts[%d] = %c\n", i, s[i]);
-		ten *= 10;
-	}
 	
+	ten = 1000000000;
+//	ten =-2147483648;
+	
+	while (ten >= n)
+		ten /= 10;	
+	
+	while (i <= c)
+	{
+		s[i] = n / ten;
+		n -= s[i] * ten;
+		s[i] += '0';
+	}	
 	return (s);
 }
 
 /*	
+ *	10000
+ *	1000
+ *	100
+ *
+ *	123 / 100
+ *	= 1
+ *	n = 123 % 100
+ *	123
  *
  */
 /*
