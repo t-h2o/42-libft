@@ -18,4 +18,9 @@ void	ft_color_prompt(int col);
 void	is_test(void);
 void	memset_test(void);
 void	strlen_test(void);
+void	strchr_test(void);
+void	strncmp_test(void);
+void	atoi_test(void);
+void	split_test(void);
+void	strjoin_test(void);
 #endif

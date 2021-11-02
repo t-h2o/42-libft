@@ -1,7 +1,13 @@
-SRCS	= 	is_test.c \
+SRCS	= 	main.c \
+		is_test.c \
 		memset_test.c \
 		strlen_test.c \
+		strchr_test.c \
+		strjoin_test.c \
+		strncmp_test.c \
 		callfunction.c \
+		atoi_test.c \
+		split_test.c \
 
 
 # source files
@@ -27,7 +33,7 @@ RM		= rm -f
 			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	lib
-			${CC} -o ${NAME} main.c -L. -lft -ltest
+			${CC} -o ${NAME} ${OBJS} -L. -lft
 
 all:		${NAME}
 			

@@ -1,6 +1,6 @@
 *.o
 program
-libft.a
+*.a
 .DS_Store
 .*.swp
 a.out

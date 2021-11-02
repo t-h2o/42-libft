@@ -50,7 +50,7 @@ size_t
 }
 
 char
-	**ft_split(const char *s1, char c)
+	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	nb_wrd;
@@ -59,13 +59,13 @@ char
 	size_t	j;
 	size_t	k;
 
-	nb_wrd = give_word(s1, c);
+	nb_wrd = give_word(s, c);
 	printf("word number : %ld\n\n", nb_wrd);	
 	tab = (char **)malloc(sizeof(char *) * nb_wrd);
 
 	display_tab(tab);
 	
-	size = give_size(tab, s1, c);
+	size = give_size(tab, s, c);
 
 
 	i = 0;
@@ -85,9 +85,9 @@ char
 		j = 0;
 		if (s1[k] == c)
 			k++;
-		while (j <= size && s1[k] != c && s1[k])
+		while (j <= size && s[k] != c && s[k])
 		{
-			tab[i][j++] = s1[k++];
+			tab[i][j++] = s[k++];
 		}
 		tab[i][j] = '\0';
 		i++;	

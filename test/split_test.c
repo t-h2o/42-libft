@@ -1,8 +1,5 @@
-#include	<stdlib.h>
-#include	<stdio.h>
+#include	"libtest.h"
 
-char
-	**ft_split(const char *s1, int c);
 
 void
 	display_tab(char **tab)
@@ -28,18 +25,19 @@ void
 
 
 
-int	main(int argc, char **argv)
+void	split_test(void)
 {
-	if (argc < 3)
-		return (0);
-	char	c = argv[2][0];
+	printf("\n\n\n\n\tSPLIT TEST\n\n");
+	
 	char	**tab;
+	char	c = '.';
+	const char	str[] = "12345.boire de l'eau. my name is to";
 
-	printf("argc\t: %d\ns1\t: %s\nc\t: %c\n\n", argc, argv[1], c);
+	printf("str\t: %s\nc\t: %c\n\n", str, c);
 
-	tab = ft_split((const char *)argv[1], c);
+	tab = ft_split((const char *)str, c);
 
 	display_tab(tab);
-	return (0);
+	 
 }
 

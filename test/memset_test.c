@@ -4,7 +4,7 @@ void
 	memset_test(void)
 {
 
-	printf("\n\n\tMEMSET TEST\n\n");	
+	printf("\n\n\n\n\tMEMSET TEST\n\n");	
 	char	ptrVoid[] = "AbCd5";
 	void	*add;
 	printf("string\n--> %s\t%p \n\n", ptrVoid, ptrVoid);
