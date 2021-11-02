@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/02 13:59:27 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/11/02 14:05:43 by tgrivel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include	"libft.h"
 #include	<stddef.h>
 	
 char
-	*strlcat(char *dest, const char *src, size_t n)
+	*ft_strlcat(char *dest, const char *src, size_t n)
 {
 	size_t	i;
 	size_t	dest_len;

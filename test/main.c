@@ -37,7 +37,7 @@ int	main(void)
 	
 	strncmp_test();
 
-	atoi_test();
+//	atoi_test();
 	
 	itoa_test();
 	

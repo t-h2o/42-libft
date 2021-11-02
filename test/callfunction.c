@@ -22,15 +22,17 @@ void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const 
 {
 	int	i;
 
-	i = -1;
-	while (list[++i])
+	i = 0;
+	while (list[i][0])
 	{
-		if (atoi(list[i]) == ft_atoi(list[i]))
+		if ((ft_ptr)(list[i]) == (ptr)(list[i]))
 			ft_color_prompt(1);
 		else 
 			ft_color_prompt(0);
 
 		printf("IN : %s,\tOUT : %d\tEXPECTED %d\n", list[i], (ft_ptr)(list[i]), (ptr)(list[i]));
+		i++;
+		printf("%p\n", &list[i][0]);
 	}
 	ft_color_prompt(2);
 	return ;	

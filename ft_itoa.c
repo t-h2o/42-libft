@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/02 13:47:58 by tgrivel           #+#    #+#             */
+/*   Updated: 2021/11/02 15:09:26 by tgrivel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include	"libft.h"
-#include	<stdio.h>
 #include	<stdlib.h>
 
 int
 	nb_char(int n)
 {
-	int	nb;
+	int			nb;
 	long int	ten;
 
 	ten = 1;
@@ -19,82 +30,50 @@ int
 	}
 	if (n == 0)
 		nb = 1;
-
-	printf("nb char %d\n", nb);
 	return (nb);
+}
+
+int
+	return_ten(int n)
+{
+	long int	ten;
+
+	ten = 1000000000;
+	while (ten > n)
+		ten /= 10;
+	return (ten);
 }
 
 char
 	*ft_itoa(int n)
 {
-	char	*s;	
-	int	i;
-	int	c;
+	char		*s;	
+	int			i;
+	int			c;
 	long int	ten;
 
 	c = nb_char(n);
-	s = (char *)malloc(sizeof(char) * (c + 1));	
+	s = (char *)malloc(c + 1);
 	if (!s)
 		return (0);
-	s[c] = '\0';
-	
-	i = 0;	
+	i = 0;
 	if (n == -2147483648)
 		s = "-2147483648";
-	if (n == -2147483648)
+	if (n == 0)
+		s = "0";
+	if (n == -2147483648 || n == 0)
 		return (s);
 	if (n < 0)
 		s[i++] = '-';
 	if (n < 0)
 		n = -n;
-	
-	ten = 1000000000;
-//	ten =-2147483648;
-	
-	while (ten >= n)
-		ten /= 10;	
-	
-	while (i <= c)
+	ten = return_ten(n);
+	while (i < c)
 	{
-		s[i] = n / ten;
-		n -= s[i] * ten;
-		s[i] += '0';
+		s[i] = n / ten + '0';
+		n -= (s[i] - '0') * ten;
+		ten /= 10;
+		i++;
 	}	
 	return (s);
 }
-
-/*	
- *	10000
- *	1000
- *	100
- *
- *	123 / 100
- *	= 1
- *	n = 123 % 100
- *	123
- *
- */
-/*
- * 	123 % 10 = 3
- * 	3 / 1 = 3
- *
- * 	123 % 100 = 23
- *	23 / 10 = 2
- *
- *	123 % 100 = 123
- *	123 / 100 = 1
- */
-/*	s[0-3]
- *	s[3] = '\0'
- *	201 % 10 = R 1 
- *	1 / 1 = 1
- *	s[2] = 1
- *	
- *	201 % 100 = 2
- *	1 / 10 = 0
- *	s[1] = 0
- *
- *	201 % 1000 = 201
- *	201 / 100 = 2
- *	s[0] = 2
- */
