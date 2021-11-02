@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:00:07 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 14:00:10 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/02 16:30:43 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,6 @@ char
 	printf("word number : %ld\n\n", nb_wrd);	
 	tab = (char **)malloc(sizeof(char *) * nb_wrd);
 
-	display_tab(tab);
-	
 	size = give_size(tab, s, c);
 
 

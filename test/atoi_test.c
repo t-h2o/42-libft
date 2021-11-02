@@ -10,5 +10,5 @@ void	atoi_test(void)
 		"**as  +32"\
 		"002456"\
 		"\0 31"};
-	ft_str_int(strings, ft_atoi, atoi);
+	ft_str_int(strings, atoi, atoi);
 }

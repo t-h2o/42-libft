@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 16:24:41 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/10/26 15:09:33 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/02 16:32:11 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_issign(char c)
 
 int	ft_isblank(char c)
 {
-	if (c == '\n' || c == '\t' || c == ' ' || c == ' ')
+	if (c == '\n' || c == '\0' || c == '\t' || c == ' ' || c == ' ')
 		return (1);
 	return (0);
 }
@@ -72,14 +72,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (ft_return(str, i, lim));
 }
-
-/*	
- *	number ??
- *
- *
- *	shit number shit
- *	shit number
- *	number shit
- *	number
- *
- */
