@@ -11,6 +11,7 @@ SRCS	= 	main.c \
 		itoa_test.c \
 		split_test.c \
 		strtrim_test.c \
+		strdup_test.c \
 
 
 # source files

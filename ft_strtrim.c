@@ -31,16 +31,12 @@ void
 /*	add in a string set'string whithout same char
  */
 
-char
-	*ft_strtrim(const char *s1, const char *set)
+size_t
+	len_whithout_set(const char *s1, char *list)
 {
-	char	list[127];
-	char	*str;
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 	size_t	str_len;
-
-	rm_samechar(set, list);
 
 	i = -1;
 	str_len = 1;
@@ -52,8 +48,22 @@ char
 				break;
 		if (!list[j])
 			str_len++;
-	}	
+	}
+	return (str_len);
+}	
+char
+	*ft_strtrim(const char *s1, const char *set)
+{
+	char	list[127];
+	char	*str;
+	int	i;
+	int	j;
+	size_t	str_len;
 
+	rm_samechar(set, list);
+
+	str_len = len_whithout_set(s1, list);
+	
 	str = (char *)malloc(str_len);
 
 	i = -1;
@@ -70,12 +80,3 @@ char
 
 	return (str);
 }
-/*	S1	: qwerty1234qwert1234
- *	set	: qq11
- *
- * 	list	: q1
- * 	
- * 	S1 - list
- * 		: werty234wert234
- *
- */

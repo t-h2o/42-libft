@@ -46,5 +46,7 @@ int	main(void)
 	
 	strtrim_test();
 
+	strdup_test();
+
 	return (0);
 }
