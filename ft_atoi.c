@@ -29,24 +29,21 @@ int	ft_atoi(const char *str)
 {
 	int		nb;
 	int		neg;
-	size_t	i;
 
-	i = 0;
-	while (ft_isblank(str[i]))
-		i++;
+	while (ft_isblank(*str))
+		str++;
 	neg = 0;
-	if (str[i] == '+' || str[i] == '-')
+	if (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			neg = 1;
-		++i;
+		str++;
 	}
 	nb = 0;
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit(*str))
 	{
-		nb += (nb * 10) + (str[i] - '0');
-		printf("--> %d\n", nb);
-		i++;
+		nb = (nb * 10) + (*str - '0');
+		str++;
 	}
 	if (neg)
 		return (nb * -1);

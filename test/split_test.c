@@ -35,6 +35,6 @@ void	split_test(void)
 	printf("str\t: %s\nc\t: %c\n\n", str, c);
 
 	tab = ft_split((const char *)str, c);
-
 	display_tab(tab);
+	free(tab);
 }

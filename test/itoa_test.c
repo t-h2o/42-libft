@@ -18,6 +18,6 @@ void	itoa_test(void)
 //		while (str[++j])
 //			printf("\tstr[%d]\t: %c\t%d\n", j, str[j], str[j]);
 //		printf("\tstr[%d]\t: %c\t%d\n", j, str[j], str[j]);
-		printf("\t\t> %s\n", ft_itoa(n[i]));
+		printf("\t\t> %s\n", str);
 	}
 }

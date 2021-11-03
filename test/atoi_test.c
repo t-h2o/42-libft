@@ -1,5 +1,5 @@
 #include	"libtest.h"
-#define		ARR		11
+#define		ARR		13
 void	atoi_test(void)
 {
 	printf("\n\n\n\n\tATOI TEST\n\n");	
@@ -19,6 +19,8 @@ void	atoi_test(void)
 		"+101",
 		"2147483647",
 		"-2147483648",
+		"+-42",
+		"-+42",
 	};
 	
 //	ft_str_int(strings, ft_atoi, atoi);

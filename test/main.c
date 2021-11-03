@@ -40,7 +40,7 @@ int	main(void)
 
 	itoa_test();
 	
-	split_test();
+//	split_test();
 	
 	atoi_test();
 	
