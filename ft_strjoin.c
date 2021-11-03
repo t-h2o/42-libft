@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include	"libft.h"
-#include	<stddef.h>
-#include	<stdlib.h>
-
 
 char
 	*ft_strjoin(const char *s1, const char *s2)
@@ -34,6 +31,6 @@ char
 		str[j++] = s1[i++];
 	i = 0;
 	while (s2[i])
-		str[j++] = s1[i++];
+		str[j++] = s2[i++];
 	return (str);
 }

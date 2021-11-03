@@ -10,6 +10,7 @@ SRCS	= 	main.c \
 		atoi_test.c \
 		itoa_test.c \
 		split_test.c \
+		strtrim_test.c \
 
 
 # source files

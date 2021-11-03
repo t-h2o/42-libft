@@ -8,7 +8,7 @@ void	atoi_test(void)
 
 
 	const char *strings[ARR] = {
-		"1",
+		"+n",
 		"a1",
 		"--1",
 		"++1",

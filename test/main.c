@@ -24,7 +24,7 @@ int	main(void)
 
 	strlen_test();
 
-//	is_test();
+//	is_test();	//OK
 
 	memset_test();
 
@@ -42,7 +42,9 @@ int	main(void)
 	
 //	split_test();
 	
-	atoi_test();
+//	atoi_test();	//OK
 	
+	strtrim_test();
+
 	return (0);
 }

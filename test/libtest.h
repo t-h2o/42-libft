@@ -25,4 +25,5 @@ void	atoi_test(void);
 void	itoa_test(void);
 void	split_test(void);
 void	strjoin_test(void);
+void	strtrim_test(void);
 #endif

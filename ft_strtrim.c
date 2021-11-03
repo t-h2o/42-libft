@@ -11,19 +11,12 @@
 /* ************************************************************************** */
 
 #include	"libft.h"
-#include	<stdlib.h>
-#include	<stddef.h>
-	
-char
-	*ft_strtrim(const char *s1, const char *set)
-{
-	char	list[127];
-	char	*str;
-	int	i;
-	int	j;
-	size_t	str_len;
 
-	i = -1;
+void
+	rm_samechar(const char *set, char *list)
+{
+	int	i = -1;
+	int	j;
 	while (set[++i])
 	{
 		j = -1;
@@ -33,7 +26,22 @@ char
 		if (!list[j])
 			list[j] = set[i];
 	}
-	
+
+}
+/*	add in a string set'string whithout same char
+ */
+
+char
+	*ft_strtrim(const char *s1, const char *set)
+{
+	char	list[127];
+	char	*str;
+	int	i;
+	int	j;
+	size_t	str_len;
+
+	rm_samechar(set, list);
+
 	i = -1;
 	str_len = 1;
 	while (s1[++i])
