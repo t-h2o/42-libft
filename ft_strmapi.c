@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<stdlib.h>
-#include	<stddef.h>
 #include	"libft.h"
 
 char
@@ -26,10 +24,11 @@ char
 	if (!str)
 		return (0);
 	i = 0;
-	while (i <= len)
+	while (len--)
 	{
-		str[i] = f(i, s[i]);
+		str[i] = (*f)(i, s[i]);
 		i ++;
 	}
+	str[i] = 0;
 	return (str);
 }
