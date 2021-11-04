@@ -45,3 +45,4 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 ## others doc
 
 * [Makefile by GNU](https://www.gnu.org/software/make/manual/make.html#Introduction)
+norminette -RCheckDefine libft.h
