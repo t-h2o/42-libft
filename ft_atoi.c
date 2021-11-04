@@ -47,7 +47,5 @@ int	ft_atoi(const char *str)
 	}
 	if (neg)
 		return (nb * -1);
-
-	printf("lol\n");
 	return (nb);
 }
