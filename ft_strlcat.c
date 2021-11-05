@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:59:27 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/04 19:03:10 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 14:56:49 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,21 @@ size_t
 {
 	size_t	src_len;
 	size_t	dest_len;
+	size_t	i;
 
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
-	if (n < dest_len)
-		return (src_len + dest_len);
-	else
+	if (n < dest_len + 1)
+		return (src_len + n);
+	i = 0;
+	while (i < (n - dest_len - 1) && src[i])
 	{
-		dest += dest_len;
-		ft_strlcpy(dest, src, n - dest_len);
-		return (src_len + dest_len);
+		dest[dest_len + i] = src[i];
+		i++;
 	}
+	if (dest_len != n)
+		dest[dest_len + i] = 0;
+	return (src_len + dest_len);
 }
 /*
 	size_t	i;

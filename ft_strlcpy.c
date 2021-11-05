@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:59:13 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/04 19:14:40 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:03:51 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,20 @@
 size_t
 	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	size_t	i;
+	const char	*src_start;
 
-	i = 0;
-	while (n-- && src[i])
-	{	
-		dest[i] = src[i];
-		i++;
+	src_start = src;
+	if (n > 1)
+	{
+		while (*src && n > 1)
+		{
+			*dest++ = *src++;
+			n--;
+		}
 	}
-	dest[i] = 0;
-	return (ft_strlen(src));
+	if (n >= 1)
+		*dest = 0;
+	while (*src)
+		src++;
+	return (src - src_start);
 }

@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:00:41 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/04 17:50:34 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:29:55 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,18 @@
 void
 	ft_putnbr_fd(int n, int fd)
 {
-	int		ten;
-	char	c;
-
-	if (n == -2147483648)
-	{
+	if (n == FT_32B_MIN)
 		ft_putstr_fd("-2147483648", fd);
-		return ;
-	}
 	if (n < 0)
-		ft_putchar_fd('-', fd);
-	if (n < 0)
-		n = -n;
-	ten = 1;
-	while (ten < n)
-		ten *= 10;
-	while (ten != 1)
 	{
-		ten /= 10;
-		c = '0' + n / ten;
-		ft_putchar_fd(c, fd);
-		n = n % ten;
+		ft_putchar_fd('-', fd);
+		n = -n;
 	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }

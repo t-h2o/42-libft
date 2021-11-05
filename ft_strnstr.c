@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:58:37 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 13:58:41 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 14:24:12 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,21 @@ char
 {
 	size_t	i;
 	size_t	j;
-	char	*ptr;
 
 	i = 0;
 	j = 0;
-	ptr = (char *)haystack;
-	while (haystack[i] && n--)
+	if (!*needle || !needle)
+		return ((char *)haystack);
+	while (needle[i] && n > j && ft_strlen(haystack))
 	{
-		if (haystack[i] == needle[j])
+		while (needle[i] == haystack[i + j] && n > i + j)
 		{
-			j++;
-			if (!needle[j])
-				return (ptr);
+			if (!needle[i + 1])
+				return (&((char *)haystack)[j]);
+			i++;
 		}
-		else
-		{
-			j = 0;
-			ptr = &((char*)haystack)[i];
-		}
-		i++;
+		i = 0;
+		j++;
 	}
 	return (0);
-
 }

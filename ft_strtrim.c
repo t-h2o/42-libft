@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:49:07 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/05 12:27:09 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:23:30 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char
 	size_t	end;
 	size_t	i;
 
+	if (!s || !set)
+		return (0);
 	start = 0;
 	while (s[start] && ft_strchr(set, s[start]))
 		start++;

@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:58:55 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 13:58:57 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:24:03 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char
 	size_t	len;
 	char	*str;
 
+	if (!s)
+		return (0);
 	len = ft_strlen(s);
 	str = (char *)malloc(len + 1);
 	if (!str)

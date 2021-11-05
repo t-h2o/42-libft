@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 16:33:29 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 17:44:33 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:07:39 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int
 	size_t	i;
 
 	i = 0;
-	while (n--)
+	while ((s1[i] || s2[i]) && n--)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 		i++;
 	}
 	return (0);
