@@ -1,23 +1,21 @@
 # 42-Libft
 Ce projet a pour objectif de vous faire coder en C une librairie de fonctions usuelles que vous pourrez utiliser dans tous vos prochains projets.
 
-## Functions
+## Control the project
 
-### Diff between strchr and strrchr
+### C header
 
-strchr search on the top of the string instead, strrchr search on the bottom of the string
+norminette -RCheckDefine libft.h
 
-#### Example
-	
-#### IN
 
-- --> Arnolde leopode end ?
-- --> letter :e
+### C file
 
-#### OUT
+norminette *c
 
-- strchr --> e leopode end ?
-- strrchr --> end ?
+
+### Makefile
+
+* Can't use the *.c you need tell every file source
 
 
 ## Lib
@@ -45,4 +43,3 @@ strchr search on the top of the string instead, strrchr search on the bottom of 
 ## others doc
 
 * [Makefile by GNU](https://www.gnu.org/software/make/manual/make.html#Introduction)
-norminette -RCheckDefine libft.h

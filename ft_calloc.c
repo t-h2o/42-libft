@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:02:07 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/04 16:40:16 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 11:46:09 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,8 @@ void
 	ft_bzero(ptr, pol);
 	return (ptr);
 }
+/* size		vol. case dune etagere
+ * nmemb	nb de case de letagere
+ *
+ * size * nmemb = vol. totale de letagere
+ */

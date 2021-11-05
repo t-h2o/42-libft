@@ -6,77 +6,35 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:49:07 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/02 13:49:11 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 12:27:09 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-void
-	rm_samechar(const char *set, char *list)
-{
-	int	i = -1;
-	int	j;
-	while (set[++i])
-	{
-		j = -1;
-		while (list[++j])
-			if (list[j] == set[i])
-				break ;
-		if (!list[j])
-			list[j] = set[i];
-	}
-
-}
-/*	add in a string set'string whithout same char
- */
-
-size_t
-	len_whithout_set(const char *s1, char *list)
-{
-	size_t	i;
-	size_t	j;
-	size_t	str_len;
-
-	i = -1;
-	str_len = 1;
-	while (s1[++i])
-	{
-		j = -1;
-		while (list[++j])
-			if (list[j] == s1[i])
-				break;
-		if (!list[j])
-			str_len++;
-	}
-	return (str_len);
-}	
 char
-	*ft_strtrim(const char *s1, const char *set)
+	*ft_strtrim(const char *s, const char *set)
 {
-	char	list[127];
 	char	*str;
-	int	i;
-	int	j;
-	size_t	str_len;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
-	rm_samechar(set, list);
-
-	str_len = len_whithout_set(s1, list);
-	
-	str = (char *)malloc(str_len);
-
-	i = -1;
-	str_len = 0;
-	while (s1[++i])
-	{
-		j = -1;
-		while (list[++j])
-			if (list[j] == s1[i])
-				break;
-		if (!list[j])
-			str[str_len++] = s1[i];
-	}
-
+	start = 0;
+	while (s[start] && ft_strchr(set, s[start]))
+		start++;
+	end = ft_strlen(s);
+	while (end > start && ft_strchr(set, s[end - 1]))
+		end--;
+	str = (char *)malloc(end - start + 1);
+	if (!str)
+		return (0);
+	i = 0;
+	while (start < end)
+		str[i++] = s[start++];
+	str[i] = 0;
 	return (str);
 }
+/* remove set char at the top and botom of s1
+ * strtim doesn't remove set char in the middle
+ */

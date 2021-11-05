@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:05:32 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/04 19:14:08 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 12:51:08 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 # include	<stddef.h>
 # include	<stdlib.h>
 # include	<unistd.h>
-# define LIBFT_H
+# define 	LIBFT_H
+# define	FT_32B_MAX		2147483647
+# define	FT_32B_MIN		-2147483648
+# define	FT_U_32B_MAX	4294967295
+# define	FT_64B_MAX		9223372036854775807
+# define	FT_64B_MIN		-9223372036854775808
+# define	FT_U_64B_MAX	18446744073709551615
 
 	// whithout extern functions
 
