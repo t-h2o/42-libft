@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:05:32 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/05 15:57:34 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 19:19:55 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@
 # define FT_64B_MAX		9223372036854775807
 # define FT_64B_MIN		-9223372036854775808
 # define FT_U_64B_MAX	18446744073709551615
+
+	// Type define
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 	// whithout extern functions
 
