@@ -7,9 +7,13 @@ SRCS	= 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 
+HEADER	= libft.h
+
 OBJS	= ${SRCS:.c=.o}
 
 CC		= gcc
+
+NAME	= libft.a
 
 FLAGS	= -Wall -Wextra -Werror
 
@@ -19,24 +23,25 @@ RM		= rm -f
 .c.o:
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-all:		lib
+${NAME}:	${OBJS}
+	ar rc ${NAME} ${OBJS} 
+	ranlib ${NAME}
+
+all:		${NAME}
 
 clean:
 	${RM} ${OBJS}
 
 fclean:		clean
-	${RM} libft.a
 	${RM} ${NAME}
 
 re:			fclean	all
-
-lib:		${OBJS}
-	ar rc libft.a *.o
-	ranlib libft.a
 
 log:
 	git log --graph --oneline
 
 norm:
 	norminette ${SRCS}
-	norminette -RCheckDefine libft.h
+	norminette -RCheckDefine ${HEADER}
+
+.PHONY: all clean fclean re bonus so
