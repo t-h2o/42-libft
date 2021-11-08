@@ -12,6 +12,7 @@
 void	ft_int_int(int (*ft_ptr)(int), int (*ptr)(int));
 void	ft_str_int(const char** list, int (*ft_ptr)(const char*), int (*ptr)(const char*));
 void	ft_str_sizet(const char** list, size_t (*ft_ptr)(const char*), size_t (*ptr)(const char*));
+void	display_list(t_list *begin);
 
 void	ft_color_prompt(int col);
 
@@ -27,4 +28,9 @@ void	split_test(void);
 void	strjoin_test(void);
 void	strtrim_test(void);
 void	strdup_test(void);
+
+	// Bonus
+
+void	lstnew_test_bonus(void);
+
 #endif

@@ -20,6 +20,7 @@ void	ft_color_prompt(int col)
 
 int	main(void)
 {	
+/*
 	memcpy_test();
 
 	strlen_test();
@@ -27,10 +28,6 @@ int	main(void)
 //	is_test();	//OK
 
 	memset_test();
-
-	
-	ft_putnbr_fd(-123456, 1);
-	
 	
 	strchr_test();
 	
@@ -47,6 +44,8 @@ int	main(void)
 	strtrim_test();
 
 	strdup_test();
+*/
+	lstnew_test_bonus();
 
 	return (0);
 }

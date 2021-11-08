@@ -1,5 +1,17 @@
 #include	"libtest.h"
 
+void
+	display_list(t_list *begin)
+{
+	if (!begin)
+	{
+		printf("END\n\n");
+		return ;
+	}
+	printf("string : %s\n", (char *)begin->content);
+	display_list(begin->next);
+}
+
 void	ft_str_sizet(const char** list, size_t (*ft_ptr)(const char*), size_t (*ptr)(const char*))
 {
 	int	i;

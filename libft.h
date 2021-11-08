@@ -6,7 +6,7 @@
 /*   By: tgrivel <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 19:05:32 by tgrivel           #+#    #+#             */
-/*   Updated: 2021/11/05 20:00:07 by tgrivel          ###   ########.fr       */
+/*   Updated: 2021/11/05 22:27:16 by tgrivel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void	ft_putchar_fd(int n, int fd);
 
 	// BONUS
 
-t_list	*ft_lst_new(void *content);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **alst, t_list *new);
 
 #endif

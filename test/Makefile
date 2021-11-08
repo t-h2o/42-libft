@@ -1,18 +1,8 @@
-SRCS	= 	main.c \
-		is_test.c \
-		memset_test.c \
-		memcpy_test.c \
-		strlen_test.c \
-		strchr_test.c \
-		strjoin_test.c \
-		strncmp_test.c \
-		callfunction.c \
-		atoi_test.c \
-		itoa_test.c \
-		split_test.c \
-		strtrim_test.c \
-		strdup_test.c \
-
+SRCS	= 	main.c is_test.c memset_test.c memcpy_test.c \
+			strlen_test.c strchr_test.c strjoin_test.c \
+			strncmp_test.c callfunction.c atoi_test.c \
+			itoa_test.c split_test.c strtrim_test.c \
+			strdup_test.c lstnew_test_bonus.c
 
 # source files
 
@@ -36,7 +26,7 @@ RM		= rm -f
 .c.o:
 			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}:	lib
+${NAME}:	${OBJS}
 			${CC} -o ${NAME} ${OBJS} -L. -lft
 
 all:		${NAME}
@@ -51,9 +41,6 @@ fclean:		clean
 
 re :		fclean	all
 
-lib:		${OBJS}
-			ar rc libtest.a *.o
-			ranlib libtest.a
 
 log:
 		git log --graph --oneline
